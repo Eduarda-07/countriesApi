@@ -1,0 +1,38 @@
+:root{
+    --imagem-fundo: url("./imgs/background.png"), url("./imgs/background.png")
+}
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    height: 100vh;
+    background-image: var(--imagem-fundo);
+    background-repeat: no-repeat;
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+}
+
+
+.pesquisar{
+    margin-top: 5vh;
+    width: 28vw;
+    height: 4vh;
+    font-size: 3vh;
+    padding-left: 2vw;
+    
+}
+
+.buscar{
+    width: 26vw;
+    height: 4vh;
+    font-size: 3vh;
+}
+
+.container h1{
+    margin-left: 3vw;
+    font-size: 6vh;
+}
