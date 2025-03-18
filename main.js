@@ -9,16 +9,20 @@ async function pesquisarContinente (continente){
     return data
 }
 
-function criarimagem (link){
+function criarCard (link){
     const galeria = document.getElementById('galeria')
+    const card = document.createElement('div')
+    card.classList.add('cards')
     const novaImg = document.createElement('img')
     const novoNome =  document.createElement('h2')
 
     novaImg.src = link.flags.png
     novoNome.textContent = link.name.common
+    
+    card.appendChild(novaImg)
+    card.appendChild(novoNome)
 
-    galeria.appendChild(novaImg)
-    galeria.appendChild(novoNome)
+    galeria.appendChild(card)
 
 }
 
@@ -28,8 +32,7 @@ async function preencherFotos (){
     const galeria = document.getElementById('galeria')
 
     galeria.replaceChildren('')
-    fotos.forEach(criarimagem)
-        
+    fotos.forEach(criarCard)
     
     console.log (fotos)
     
