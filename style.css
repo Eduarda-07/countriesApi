@@ -12,16 +12,6 @@ html{
     height: 100%;
 }
 
-/* body{
-    height: 100%;
-    width: 100%;
-    background-image: var(--imagem-fundo);
-    background-repeat: no-repeat;
-    display: flex; 
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-}  */
 body{
     height: 100%;
     width: 100%;
@@ -116,4 +106,73 @@ main{
 .cards img{
     width: 100%;
     height: 25vh;
+}
+
+.tela3{
+   display: none;
+}
+.tela3_atualizada{
+    height: 100%;
+    width: 100%;
+    padding: 5vh;
+}
+.box{
+    display: flex;
+    background-color: rgba(203, 233, 245, 0.5);
+    height: 100%;
+    width: 100%;
+    border-radius: 1vh;
+    position: static;
+}
+.conteudo1{
+    margin-top: 23vh;
+    margin-left: 5vw;
+}
+.conteudo1 h1{
+    text-align: center;
+    margin-bottom: 2vh;
+    margin-top: 2vh;
+    font-size: 4vh;
+    font-weight: bold;
+}
+.conteudo1 h2{
+    text-align: center;
+    margin-bottom: 2vh;
+    margin-top: 2vh;
+    font-size: 4vh;
+    font-weight: 500;
+}
+.conteudo1 img{
+    height: 30vh;
+    width: 30vw;
+ 
+}
+.conteudo2{
+    margin-top: 23vh;
+    margin-left: 10vw;
+
+}
+.conteudo3{
+    margin-top: 23vh;
+    margin-left: 10vw;
+}
+.conteudo2 h2{
+    font-size: 4vh;
+    font-weight: 600;
+    margin-bottom: 1vh;
+}
+.conteudo2 h3{
+    font-size: 4vh;
+    font-weight: 500;
+    margin-bottom: 1vh;
+}
+.conteudo3 h2{
+    font-size: 4vh;
+    font-weight: 600;
+    margin-bottom: 1vh;
+}
+.conteudo3 h3{
+    font-size: 4vh;
+    font-weight: 500;
+    margin-bottom: 1vh;
 }
