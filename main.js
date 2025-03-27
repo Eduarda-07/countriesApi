@@ -27,22 +27,35 @@ function criarCard (link, galeria){
 
     galeria.appendChild(card)
 
-    novaImg.addEventListener('click', async function(){
-        await criarPais(pais)
+    novaImg.addEventListener('click', async function(e){
+       const pais = e.target.dataset.infoPais
+
+       const responsePais = await buscarPais(pais)
+
+       await criarPais(responsePais)
+
+
     })
   
 }
 
 async function buscarPais(pais){
-    const url = `https://restcountries.com/v3.1/name/${pais}`
+    const url = `https://restcountries.com/v3.1/name/${pais}?fullText=true`
     const response = await fetch(url)
     const data = await response.json()
 
     return data
 }
 
-function criarPais (link){
+function criarPais (linkArray){
+
+
+    const link = linkArray[0]   
+    
     const tela3 = document.getElementById('tela3')
+
+    tela2.replaceChildren()
+
     const box = document.getElementById('box')
     const conteudo1 = document.createElement('div')
 
@@ -72,7 +85,9 @@ function criarPais (link){
     independente.textContent = 'Independent:'
     status.textContent = link.independente
     coin.textContent = 'Coin:'
-    nomeCoin.textContent = link.currencies[0].name
+    // console.log(link.currencies[0].name);
+    
+    // nomeCoin.textContent = link.currencies[0].name
     capital.textContent = 'Capital:'
     nomeCapital.textContent = link.capital
 
