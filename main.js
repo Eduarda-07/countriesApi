@@ -84,25 +84,21 @@ function criarPais (linkArray){
 
     nomeOficial.textContent = 'Official name:'
     nome.textContent = link.name.official
-    independente.textContent = 'Independent:'
-    if ( link.independente === true ){
-        status.textContent = 'True'
-        
+    independente.textContent = `Independent:`
+    status.textContent = `${link.independent}`
+    if (link.independent === true) {
+        status.style.color = 'Green'
     } else {
-        status.textContent = 'False' 
+        status.style.color = 'Red'
     }
-    // console.log(link.independente);
-
-    coin.textContent = 'Coin:'
-    // console.log(link.currencies[0]);
     
-    // nomeCoin.textContent = link.currencies[0].name
+   
+    coin.textContent = 'Coin:'
+    const coinValor =  Object.keys(link.currencies)[0]
+    nomeCoin.textContent = link.currencies[coinValor].name
 
-    if (link.currencies[0] !== undefined) {
-        nomeCoin.textContent = link.currencies[0].name
-    } else {
-        nomeCoin.textContent = "Moeda não encontrada" 
-    }
+ 
+   
     capital.textContent = 'Capital:'
     nomeCapital.textContent = link.capital
 
@@ -121,7 +117,8 @@ function criarPais (linkArray){
     subRegiao.textContent = 'Subregion:'
     nomeSubRegiao.textContent = link.subregion
     lingua.textContent = 'Language:'
-    idioma.textContent = link.languages[0]
+    const idiomaValor =  Object.keys(link.languages)[0]
+    idioma.textContent = link.languages[idiomaValor]
     nativos.textContent = 'Natives:'
     nomeNativos.textContent = link.demonyms.eng.m
     populacao.textContent = 'Population:'
@@ -189,15 +186,20 @@ async function preencherFotos (){
    
 
     console.log (fotos) 
+
+    // localStorage.setItem('pagina', '');
 }
 
 document.getElementById('buscar')
     .addEventListener('click', preencherFotos)
 
-// function voltarPaginaAnterior() {
-//         location.replace(document.tela2);
-//       }
-//       document.getElementById("icone").addEventListener("click", voltarPaginaAnterior);
-document.getElementById('icone')
-    .addEventListener('click',  function() {
-        history.back();})
+function voltar(){
+
+    // window.history.back();
+    location.reload()
+}
+
+
+// if(localStorage.getItem('pagina')){
+//     preencherFotos(localStorage.getItem('pagina'));
+// }

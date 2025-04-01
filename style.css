@@ -149,7 +149,7 @@ main{
     font-weight: 500;
 }
 .conteudo1 img{
-    height: 30vh;
+    height: 35vh;
     width: 30vw;
  
 }
@@ -157,11 +157,6 @@ main{
     margin-top: 9vh;
     margin-left: 8vw;
 
-}
-.conteudo3{
-    margin-top: 8vh;
-    margin-right: 5vw;
-    margin-left: 5vw;
 }
 .conteudo2 h2{
     font-size: 5vh;
@@ -172,6 +167,12 @@ main{
     font-size: 5vh;
     font-weight: 500;
     margin-bottom: 1vh;
+}
+
+.conteudo3{
+    margin-top: 8vh;
+    margin-right: 5vw;
+    margin-left: 5vw;
 }
 .conteudo3 h2{
     font-size: 5vh;
