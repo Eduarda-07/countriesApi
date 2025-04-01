@@ -49,12 +49,14 @@ async function buscarPais(pais){
 
 function criarPais (linkArray){
 
-
+    const tela2 = document.getElementById('tela2')
+    const container = document.getElementById('container')
     const link = linkArray[0]   
     
     const tela3 = document.getElementById('tela3')
 
     tela2.replaceChildren()
+    container.replaceChildren()
 
     const box = document.getElementById('box')
     const conteudo1 = document.createElement('div')
@@ -83,11 +85,24 @@ function criarPais (linkArray){
     nomeOficial.textContent = 'Official name:'
     nome.textContent = link.name.official
     independente.textContent = 'Independent:'
-    status.textContent = link.independente
+    if ( link.independente === true ){
+        status.textContent = 'True'
+        
+    } else {
+        status.textContent = 'False' 
+    }
+    // console.log(link.independente);
+
     coin.textContent = 'Coin:'
-    // console.log(link.currencies[0].name);
+    // console.log(link.currencies[0]);
     
     // nomeCoin.textContent = link.currencies[0].name
+
+    if (link.currencies[0] !== undefined) {
+        nomeCoin.textContent = link.currencies[0].name
+    } else {
+        nomeCoin.textContent = "Moeda não encontrada" 
+    }
     capital.textContent = 'Capital:'
     nomeCapital.textContent = link.capital
 
@@ -140,6 +155,7 @@ function criarPais (linkArray){
 
     tela3.appendChild(box)
     tela3.style.display = 'block'
+    tela3.classList = "tela3_atualizada"
 
 }
 
@@ -177,3 +193,11 @@ async function preencherFotos (){
 
 document.getElementById('buscar')
     .addEventListener('click', preencherFotos)
+
+// function voltarPaginaAnterior() {
+//         location.replace(document.tela2);
+//       }
+//       document.getElementById("icone").addEventListener("click", voltarPaginaAnterior);
+document.getElementById('icone')
+    .addEventListener('click',  function() {
+        history.back();})

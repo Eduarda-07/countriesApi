@@ -25,7 +25,10 @@ body{
     align-items: center;
     flex-direction: column;
 } 
-
+.icone{
+    margin-left: 92vw;
+    margin-top: 2vh;
+}
 header{
     display: flex; 
     justify-content: center;
@@ -36,7 +39,7 @@ header{
 .h1_original{
     font-size: 6vh;
     text-align: center;
-    margin-top: 45vh;
+    margin-top: 35vh;
 }
 
 .pesquisar_original{
@@ -114,7 +117,8 @@ main{
 .tela3_atualizada{
     height: 100%;
     width: 100%;
-    padding: 5vh;
+    padding-left: 5vh;
+    padding-right: 5vh;
 }
 .box{
     display: flex;
@@ -123,23 +127,25 @@ main{
     width: 100%;
     border-radius: 1vh;
     position: static;
+    margin-top: 2vh;
+    padding-bottom: 8vh;
 }
 .conteudo1{
-    margin-top: 23vh;
+    margin-top: 8vh;
     margin-left: 5vw;
 }
 .conteudo1 h1{
     text-align: center;
     margin-bottom: 2vh;
     margin-top: 2vh;
-    font-size: 4vh;
+    font-size: 5vh;
     font-weight: bold;
 }
 .conteudo1 h2{
     text-align: center;
     margin-bottom: 2vh;
     margin-top: 2vh;
-    font-size: 4vh;
+    font-size: 5vh;
     font-weight: 500;
 }
 .conteudo1 img{
@@ -148,31 +154,32 @@ main{
  
 }
 .conteudo2{
-    margin-top: 23vh;
-    margin-left: 10vw;
+    margin-top: 9vh;
+    margin-left: 8vw;
 
 }
 .conteudo3{
-    margin-top: 23vh;
-    margin-left: 10vw;
+    margin-top: 8vh;
+    margin-right: 5vw;
+    margin-left: 5vw;
 }
 .conteudo2 h2{
-    font-size: 4vh;
+    font-size: 5vh;
     font-weight: 600;
     margin-bottom: 1vh;
 }
 .conteudo2 h3{
-    font-size: 4vh;
+    font-size: 5vh;
     font-weight: 500;
     margin-bottom: 1vh;
 }
 .conteudo3 h2{
-    font-size: 4vh;
+    font-size: 5vh;
     font-weight: 600;
     margin-bottom: 1vh;
 }
 .conteudo3 h3{
-    font-size: 4vh;
+    font-size: 5vh;
     font-weight: 500;
     margin-bottom: 1vh;
 }
